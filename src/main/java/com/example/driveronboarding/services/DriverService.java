@@ -31,7 +31,7 @@ public class DriverService {
                                     DriverStatus.CREATED,
                                     request.getAddress(),
                                     null, null,
-                                    false, false, null,
+                                    false, false, request.getMetadata(),
                                      now, now);
         driverRepository.save(driver);
         return driver;

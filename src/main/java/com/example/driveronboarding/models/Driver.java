@@ -9,6 +9,7 @@ import javax.persistence.*;
 import java.util.List;
 import java.util.Map;
 import com.example.driveronboarding.helper.JsonbConverter;
+import org.hibernate.annotations.Type;
 
 @Data
 @Entity
@@ -43,9 +44,8 @@ public class Driver {
     @Column(nullable = true)
     private boolean isBackgroundVerified;
 
-    @Column(columnDefinition = "jsonb")
     @Convert(converter = JsonbConverter.class)
-    private Map<Object, Object> metadataJson;
+    private Map<Object, Object> metadata;
 
     private long createdAt;
 

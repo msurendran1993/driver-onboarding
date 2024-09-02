@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.util.Map;
+
 @AllArgsConstructor
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -16,5 +18,5 @@ public class DriverCreateRequest {
     private String aadhar;
     private String dob;
     private String address;
-
+    private Map<Object, Object> metadata;
 }
